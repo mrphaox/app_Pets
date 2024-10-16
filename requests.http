@@ -1,0 +1,75 @@
+###
+POST http://localhost:9000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "contraseña": "123456"
+}
+###
+POST http://localhost:9000/api/users/register HTTP/1.1
+Content-Type: application/json
+{
+    "nombre": "adrea pes",
+    "email": "adrea_pes@example.com",
+    "contraseña": "123456",
+    "rol": "user"
+}
+###
+GET http://localhost:9000/api/users/list HTTP/1.1
+###
+GET http://localhost:9000/api/users/670edb659cab2ee0afd425d6/view HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDMxNDM4LCJleHAiOjE3MjkwMzUwMzh9.nf-A3NsQ9BRt2LQgzs3bc0g4m1BOVR8lylnnxOpzjWI
+###
+PUT http://localhost:9000/api/users/670ee6a74b8aa3d4616ea6b4/update HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTZhNzRiOGFhM2Q0NjE2ZWE2YjQiLCJlbWFpbCI6InBsYXphc0x1aXNhc0BleGFtcGxlLmNvbSIsImlhdCI6MTcyOTAyOTgxNiwiZXhwIjoxNzI5MDMzNDE2fQ.w_5k03W3W5SWwVDW2zBEmJ3lO81U2LzJ3y1Z6htb__M
+
+{
+    "nombre": "luis perez A",
+    "email": "perezLuis@example.com"
+}
+
+###
+DELETE http://localhost:9000/api/users/670edb659cab2ee0afd425d6/delete HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTA5NDk3Mzc5ZDBhZTdjZGEzYmMiLCJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDI4OTQ2LCJleHAiOjE3MjkwMzI1NDZ9.FTkD3LXEaaHi-6_3LIw5mR0U4KytoxxNMdmoov23VOo
+
+###
+POST http://localhost:9000/api/pets/create HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDM2MzI4LCJleHAiOjE3MjkwMzk5Mjh9.EhpiAjS3tFj-zfL-VzcPvxqDkGllGAudkpWZ4P0qACs
+
+{
+    "name": "sisifos",
+    "type": "gato",
+    "raza": "comun",
+    "age": 2,
+    "photo": "https://example.com/foto_de_sis.jpg",
+    "owners": ["670ee09497379d0ae7cda3bc","670f00a5f41bd3d69a6e50d5"]
+}
+
+###
+GET http://localhost:9000/api/pets/list HTTP/1.1
+###
+GET http://localhost:9000/api/pets/670f00384c18c220d8e4162b/view HTTP/1.1
+Content-Type: application/json
+###
+PUT http://localhost:9000/api/pets/670f00384c18c220d8e4162b,670f00a5f41bd3d69a6e50d5/update HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDM4MjAxLCJleHAiOjE3MjkwNDE4MDF9.BivDniDikNud6I_p3QJNh4flrT0HWxHfhIvumv--KBM
+
+{
+    "name": "sisifo actualizado",
+    "type": "gato",
+    "raza": "comun",
+    "age": 3,
+    "photo": "https://example.com/foto_de_sis_actualizada.jpg",
+    "owners": ["670edb659cab2ee0afd425d6"]
+}
+
+###
+DELETE http://localhost:9000/api/pets/670eabd9b3Ab1c76717e9855b/delete HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDM4MjAxLCJleHAiOjE3MjkwNDE4MDF9.BivDniDikNud6I_p3QJNh4flrT0HWxHfhIvumv--KBM
