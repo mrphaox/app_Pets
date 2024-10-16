@@ -9,26 +9,28 @@ Content-Type: application/json
 ###
 POST http://localhost:9000/api/users/register HTTP/1.1
 Content-Type: application/json
+
 {
-    "nombre": "adrea pes",
-    "email": "adrea_pes@example.com",
+    "nombre": "adrew pezer",
+    "email": "adrew_pez@example.com",
     "contraseña": "123456",
     "rol": "user"
 }
+
 ###
 GET http://localhost:9000/api/users/list HTTP/1.1
 ###
-GET http://localhost:9000/api/users/670edb659cab2ee0afd425d6/view HTTP/1.1
+GET http://localhost:9000/api/users/670ee09497379d0ae7cda3bc/view HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDMxNDM4LCJleHAiOjE3MjkwMzUwMzh9.nf-A3NsQ9BRt2LQgzs3bc0g4m1BOVR8lylnnxOpzjWI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDk0NzI4LCJleHAiOjE3MjkwOTgzMjh9.pgjjG37Jj9JcAgMEUNHjXmBar8sNWr6V2ISEJft1N1w
 ###
-PUT http://localhost:9000/api/users/670ee6a74b8aa3d4616ea6b4/update HTTP/1.1
+PUT http://localhost:9000/api/users/670ee09497379d0ae7cda3bc/update HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTZhNzRiOGFhM2Q0NjE2ZWE2YjQiLCJlbWFpbCI6InBsYXphc0x1aXNhc0BleGFtcGxlLmNvbSIsImlhdCI6MTcyOTAyOTgxNiwiZXhwIjoxNzI5MDMzNDE2fQ.w_5k03W3W5SWwVDW2zBEmJ3lO81U2LzJ3y1Z6htb__M
+Authorization: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDk0NzI4LCJleHAiOjE3MjkwOTgzMjh9.pgjjG37Jj9JcAgMEUNHjXmBar8sNWr6V2ISEJft1N1w
 
 {
-    "nombre": "luis perez A",
-    "email": "perezLuis@example.com"
+    "nombre": "jhon D does",
+    "email": "john.ddoe@example.com"
 }
 
 ###
@@ -42,18 +44,18 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDkyNDI2LCJleHAiOjE3MjkwOTYwMjZ9.CoJ_W71YMGDUd0MoJ1bJoCF40EmtGQwQQMrVOUENkuM
 
 {
-   "name": "Max",
-  "type": "dog",
+   "name": "laou",
+  "type": "cat",
   "sex": "male",
-  "breed": "Labrador",
+  "breed": "comun",
   "birthdate": "2021-03-01T00:00:00Z",
-  "age": 2,
-  "weight": 25,
-  "height": 50,
+  "age": 4,
+  "weight": 1,
+  "height": 2,
   "temperament": "friendly",
-  "chipNumber": "1234567890",
-  "description": "Very playful dog",
-  "owners": ["670f00a5f41bd3d69a6e50d5"]
+  "chipNumber": "12345673",
+  "description": "Very playful cat",
+  "owners": ["670fe439e4123598a7fa97fe"]
 }
 
 
