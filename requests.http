@@ -58,28 +58,31 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZ
   "owners": ["670fe439e4123598a7fa97fe"]
 }
 
+###
+GET http://localhost:9000/api/pets/listAll HTTP/1.1
 
 ###
 GET http://localhost:9000/api/pets/list HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MTMzNDAzLCJleHAiOjE3MjkxMzcwMDN9.u3CpqYXpDTFieQlyu2Zp0E7lv371l4P7xfqac5MOOk8
 ###
 GET http://localhost:9000/api/pets/670f00c9f41bd3d69a6e50d9/view HTTP/1.1
 Content-Type: application/json
 ###
-PUT http://localhost:9000/api/pets/670f00c9f41bd3d69a6e50d9/update HTTP/1.1
+PUT http://localhost:9000/api/pets/670f06d5f41bd3d69a6e50e4/update HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDQ2MDQ3LCJleHAiOjE3MjkwNDk2NDd9.WApBzbbkeude3kYC38oxsRQi2v0jZu_6o2yLqvqw_VI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDkyNDI2LCJleHAiOjE3MjkwOTYwMjZ9.CoJ_W71YMGDUd0MoJ1bJoCF40EmtGQwQQMrVOUENkuM
 
 {
-   "name": "Max",
-  "type": "dog",
+   "name": "sisifos",
+  "type": "gato",
   "sex": "male",
-  "breed": "Labrador",
-  "birthdate": "2021-03-01T00:00:00Z",
-  "age": 3,
-  "weight": 25,
-  "height": 50,
+  "breed": "comun",
+  "birthdate": "2019-03-01T00:00:00Z",
+  "age": 6,
+  "weight": 12,
+  "height": 3,
   "temperament": "friendly",
-  "chipNumber": "1234567890",
+  "chipNumber": "1234563434",
   "description": "Very playful dog",
   "owners": ["670f00a5f41bd3d69a6e50d5","670ee6a74b8aa3d4616ea6b4"]
 }

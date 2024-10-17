@@ -18,9 +18,30 @@ petRoutes.post("/pets/create", autenticarToken, validarDueños, async(req, res) 
 });
 
 // Obtener todas las mascotas
-petRoutes.get("/pets/list", async(req, res) => {
+petRoutes.get("/pets/listAll", async (req, res) => {
     try {
         const mascotas = await Pet.find().populate('owners', 'nombre email _id');
+        
+        if (mascotas.length === 0) {
+            return res.status(404).json({ mensaje: 'No se encontraron mascotas' });
+        }
+
+        res.status(200).json(mascotas);
+    } catch (error) {
+        res.status(500).json({ mensaje: error.message });
+    }
+});
+// Obtener las mascotas del usuario autenticado
+petRoutes.get("/pets/list", autenticarToken, async(req, res) => {
+    try {
+        // Filtrar las mascotas por el ID del usuario autenticado
+        const userId = req.user._id;
+        const mascotas = await Pet.find({ owners: userId }).populate('owners', 'nombre email _id');
+
+        if (mascotas.length === 0) {
+            return res.status(404).json({ mensaje: 'No tienes mascotas registradas' });
+        }
+
         res.status(200).json(mascotas);
     } catch (error) {
         res.status(500).json({ mensaje: error.message });
